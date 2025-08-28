@@ -77,6 +77,7 @@
   * [Langtons Ant](cellular_automata/langtons_ant.py)
   * [Nagel Schrekenberg](cellular_automata/nagel_schrekenberg.py)
   * [One Dimensional](cellular_automata/one_dimensional.py)
+  * [Von Neumann](cellular_automata/von_neumann.py)
   * [Wa Tor](cellular_automata/wa_tor.py)
 
 ## Ciphers

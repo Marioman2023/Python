@@ -309,7 +309,25 @@ def simulate_von_neumann_cellular_automaton(
     return generation_history
 
 
+def visualise_simulation_history(generation_history: list[np.ndarray]) -> None:
+    # Imports within the function as not required for the simulation algorithm.
+    from matplotlib import pyplot as plt
+    from matplotlib.animation import FuncAnimation
+
+    fig, ax = plt.subplots()
+
+    def animate_func(i):
+        ax.imshow(generation_history[i])
+
+    anim = FuncAnimation(fig, animate_func, frames=len(generation_history))  # noqa: F841
+
+    plt.show()
+
+
 if __name__ == "__main__":
     import doctest
 
     doctest.testmod(verbose=True)
+
+    history = simulate_von_neumann_cellular_automaton()
+    visualise_simulation_history(history)
